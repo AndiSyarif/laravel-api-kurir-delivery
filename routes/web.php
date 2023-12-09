@@ -24,3 +24,7 @@ Route::resource('/barang', BarangController::class);
 
 //route ongkir
 Route::resource('/ongkir', OngkirController::class);
+Route::get('/getprovince', [OngkirController::class, 'getProvince']);
+Route::get('/getorigincity', [OngkirController::class, 'getOriginCity']);
+Route::get('/getdestinationcity', [OngkirController::class, 'getDestinationCity']);
+Route::post('/getcost', [OngkirController::class, 'getCost']);
